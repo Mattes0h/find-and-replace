@@ -2,11 +2,11 @@
   'cmd-F': 'project-find:show'
   'cmd-f': 'find-and-replace:show'
   'cmd-alt-f': 'find-and-replace:show-replace'
-  'ctrl-alt-p': 'find-and-replace:find-space-profile'
 
 '.platform-win32, .platform-linux':
   'ctrl-F': 'project-find:show'
   'ctrl-f': 'find-and-replace:show'
+  'ctrl-alt-f': 'find-and-replace:show-replace'
 
 '.platform-darwin atom-text-editor':
   'cmd-g': 'find-and-replace:find-next'
@@ -15,9 +15,7 @@
   'cmd-shift-f3': 'find-and-replace:find-previous-selected'
   'cmd-ctrl-g': 'find-and-replace:select-all'
   'cmd-d': 'find-and-replace:select-next'
-  'cmd-alt-e': 'find-and-replace:replace-next'
   'cmd-e': 'find-and-replace:use-selection-as-find-pattern'
-  'cmd-shift-e': 'find-and-replace:use-selection-as-replace-pattern'
   'cmd-u': 'find-and-replace:select-undo'
   'cmd-k cmd-d': 'find-and-replace:select-skip'
 
@@ -29,7 +27,6 @@
   'alt-f3': 'find-and-replace:select-all'
   'ctrl-d': 'find-and-replace:select-next'
   'ctrl-e': 'find-and-replace:use-selection-as-find-pattern'
-  'ctrl-shift-e': 'find-and-replace:use-selection-as-replace-pattern'
   'ctrl-u': 'find-and-replace:select-undo'
   'ctrl-k ctrl-d': 'find-and-replace:select-skip'
 
@@ -47,7 +44,9 @@
   'ctrl-enter': 'find-and-replace:confirm'
   'alt-enter': 'find-and-replace:find-all'
   'ctrl-alt-/': 'find-and-replace:toggle-regex-option'
-  'ctrl-shift-c': 'find-and-replace:toggle-case-option'
+  'ctrl-alt-c': 'find-and-replace:toggle-case-option'
+  'ctrl-alt-s': 'find-and-replace:toggle-selection-option'
+  'ctrl-alt-w': 'find-and-replace:toggle-whole-word-option'
 
 '.platform-darwin .project-find':
   'cmd-enter': 'project-find:confirm'
@@ -58,7 +57,8 @@
 '.platform-win32 .project-find, .platform-linux .project-find':
   'ctrl-enter': 'project-find:confirm'
   'ctrl-alt-/': 'project-find:toggle-regex-option'
-  'ctrl-shift-c': 'project-find:toggle-case-option'
+  'ctrl-alt-c': 'project-find:toggle-case-option'
+  'ctrl-alt-w': 'project-find:toggle-whole-word-option'
 
 '.find-and-replace, .project-find, .project-find .results-view':
   'tab': 'find-and-replace:focus-next'
@@ -78,9 +78,3 @@
   'ctrl-enter': 'find-and-replace:replace-all'
 '.platform-linux .project-find .replace-container atom-text-editor':
   'ctrl-enter': 'project-find:replace-all'
-
-'.results-view':
-  'home': 'core:move-to-top'
-  'ctrl-home': 'core:move-to-top'
-  'end': 'core:move-to-bottom'
-  'ctrl-end': 'core:move-to-bottom'
